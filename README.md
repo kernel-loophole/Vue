@@ -19,40 +19,27 @@ Vue.createApp({
                         required: true
                     },
                 }
-            })    ```
-
-
-
-# Vue Components
+            })    
+            
+```
+# Vue Methods
 ```javascript
-Vue.createApp({
-        data() {
-            return {
-                myplans: ['test', 'hello', 'make-it']
-            }
-        }
+   let myapp = Vue.createApp({
+            data: function() {
+                return {
+                    gretting: 'hello world ,this is vue app',
+                    test1: false,
+                    test2: false,
+                    plans: ['helo', 'world']
 
-
-    })
-    .component('paln', {
-        template: "#test_it",
-        props: {
-            name: {
-                type: String,
-                required: true
+                }
             },
-        }
-    })
-    .component('plan-picker', {
-        template: "#plan-picker-template",
-        data() {
-            return {
-                myplans: ['test', 'hello', 'make-it']
-
+            methods: {
+                toggle() {
+                    this.test1 = !this.test1
+                }
             }
-        }
+        });
 
-    })
-    .mount("#myapp_test")
-    ```
 
+```
