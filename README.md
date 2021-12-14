@@ -1,5 +1,29 @@
 # Vue
 Vue.js 
+# Vue Components
+```javascript
+Vue.createApp({
+                data() {
+                    return {
+                        myplans: ['test', 'hello', 'make-it']
+                    }
+                }
+
+
+            })
+            .component('paln', {
+                template: "#test_it",
+                props: {
+                    name: {
+                        type: String,
+                        required: true
+                    },
+                }
+            })    ```
+
+
+
+# Vue Components
 ```javascript
 Vue.createApp({
         data() {
@@ -29,4 +53,6 @@ Vue.createApp({
         }
 
     })
-    .mount("#myapp_test")```
+    .mount("#myapp_test")
+    ```
+
