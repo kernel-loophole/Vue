@@ -44,7 +44,7 @@ Vue.createApp({
 
 ```
 
-# conditions
+# else-if (conditions)
 ```javascript
    <img :src="image" style="height: 300px; width:300px">
         <p v-if="number>10" style="color: green;">instock
