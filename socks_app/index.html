@@ -8,74 +8,27 @@
     <link rel="stylesheet" href="/style.css">
     <!-- Import Vue.js -->
     <script src="https://unpkg.com/vue@3"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.31/vue.cjs.js" integrity="sha512-2e2aXOh4/FgkCAUyurkjk0Uw4m1gPcExFwb1Ai4Ajjg97se/FEWfrLG1na4mq8cgOzouc8qLIqsh0EGksPGdqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.31/vue.esm-browser.min.js" integrity="sha512-bhLo0QqbHUDheOKP31j42AcKHqqcRi9uv9/u9UmU+xzByCAcsCRCJK158AYzsA4C49bgOOPYao5fzLYrVeWT6w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 </head>
 
 <body>
     <div id="app">
-        <!-- <h1>{{ product }}</h1>
-        <h1>{{ sales }}</h1> -->
-        <!-- <h1>this is return form vue
-            <div style="color: brown;">{{name}}</div>
-        </h1> -->
-        <!--- v-bind attritube -->
-        <h3 style="right:100%;">{{card}}</h3>
-        <img :src="image" style="height: 300px; width:300px">
-        <p v-if="number>10" style="color: green;">instock
-            <button class="button" v-on:click="addToCard"> add to cards</button>
-
-        </p>
-        <p class="color-circle" v-for="vari in variants" :key="vari.id" @mouseover="update(vari.image)">{{vari.color}}</p>
-        <h3>Details</h3>
-        <p v-for="detail in details">{{detail}}</p>
-
-        <p v-if="number>10">almost 2 pieces left</p>
-        <p v-else style="color: brown;"> outstock</p>
-
+        <div class="nav-bar">
+            <product-details :pre="pre"></product-details>
+            <product-details></product-details>
+            <product-details></product-details>
+            <form-com></form-com>
+        </div>
     </div>
-
+    <script>
+    </script>
     <!-- Import App -->
 
     <!-- Mount App -->
-
-    <script>
-        const app = Vue.createApp({
-            data() {
-                return {
-                    product: 'socks',
-                    sales: "check",
-                    name: "make a sale",
-                    image: 'sock2.jpg',
-                    instock: false,
-                    number: 100,
-                    details: ["80% cotton", "20% polyester"],
-                    variants: [{
-                        id: 2234,
-                        color: "green",
-                        image: "sock1.jpg",
-                        quantity: 10
-                    }, {
-                        id: 2235,
-                        color: "blue",
-                        image: "sock2.jpg",
-                        quantity: 10
-                    }],
-                    card: 0
-                }
-            },
-            methods: {
-                addToCard() {
-                    this.card += 1
-                },
-                update(variantImage) {
-                    this.image = variantImage
-                }
-            }
-        })
-        const mountedApp = app.mount('#app')
-    </script>
 
 </body>
 
