@@ -1,0 +1,6 @@
+body {
+    background-attachment: fixed;
+    background-image: url("./logo.png");
+    background-size: cover;
+    image-resolution: from-image;
+}
